@@ -1,15 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@700&family=Open+Sans&family=Roboto&display=swap');
+
+body{margin: 0px; }
 /*메뉴바*/
 .container {display:flex;
           width:100%;
           height:2vh;
           flex-wrap: wrap;
           flex-direction: column;
-          justify-content: start;
+          justify-content:space-between; 
           position: fixed;
                               
          }
          
-              .item {width:33.3%;
+              .item {
                      height:50px;
                      flex: 1 0 auto;
                      text-decoration-color:red;
@@ -26,17 +30,21 @@
                 top:0;
                 left:0;
                 z-index:-1;
-                opacity: 0.3;
+                opacity: 0.5;
               }  
-                         
-              
-              .item1{margin-left:flex-start;
-              }
-               .item2{align-self: center;
-              }
-              .item3{align-self: flex-end;
-              }        
 
+              .item0{text-align:start;
+                     margin-left:15px;
+              }
+
+              .item:hover, .item:active {font-size:20px; font-weight: bold; }
+              .item0:hover, #item:active {font-weight: 300px; }
+              
+           
+              a{text-decoration:none; color:white;
+                font-weight: 640;
+                font-family: 'Nanum Gothic', sans-serif;}
+                /*a태그는 전부다 되는데 a는 번호못붙이는지..*/
               
 /*//////////////////////////////////////////////*/
 
@@ -53,9 +61,6 @@
                    height:10px;
                   }
 
-          a{text-decoration:none; color:white;
-            font-weight: 640;}
-            /*a태그는 전부다 되는데 a는 번호못붙이는지..*/
           
           /*아직모르겟음..
           a:visited{text-decoration:red;}
@@ -66,12 +71,12 @@
 
                      /* 목적지를 입력하시오 창 */
                    .botton1{display:flex;
-                            width:100%;
+                            width:60%;
                             height:100vh;
                             background-color: black;
                     } 
                   
-                div.name
+                span#name
                          { height: 40px;
                             width:400px;
                             border: 1px solid red;
@@ -82,11 +87,11 @@
                
                input{
                   font-size: 10px;
-                  width: 325px;
+                  width: 340px;
                   padding: 10px;
                   border: 1px;
-                  outline: solid green;
-                  background:rgb(161, 235, 219);
+                  outline: solid black;
+                  background:gray;
                   float: left;
                   left:36.7%;
                   position: relative;
@@ -96,7 +101,7 @@
              width: 50px;
              height: 30px;
                   border: 1px;
-                  outline:solid green;
+                  outline:solid black;
                   left:37%;
                   position: relative;
                 }
@@ -105,7 +110,9 @@
          input::-webkit-input-placeholder {color:black;}
          input::-moz-placeholder {color:black;}
                     /*여기까지 목적지 입력 창*/
-        
+        #야간모드_주간모드{width:100px;
+                          margin-top:115px;
+                          margin-left: 32.8%;}
                     /*//////////////////////////////////////////////*/
                     
               .explain{background-image: url('car.');
@@ -113,7 +120,9 @@
                  background-size: 100%; 
                  background-image: url('road.jpg');
                  background-size:100%;
-                }
+                 font-family: 'Noto Sans KR', sans-serif;
+                 padding-left:5px;
+                 }
                 
                 
                 .explain1{display: flex;
@@ -130,5 +139,28 @@
                                 text-align: start;
                                 position: sticky;
                                 margin-top:auto;
-                                padding-bottom: 0;}
-                           
+                                padding-bottom: 0;
+                                font-family: 'Nanum Gothic', sans-serif;
+                                padding-left:5px;}
+  
+                                
+  .elcar2{display:flex;
+          border:1px solid black;
+          font-family: 'Nanum Gothic', sans-serif;}
+
+  .elcar21{flex-direction: column;
+            border:1px solid black;
+            width:700%;
+            height:100%;
+            top:45px;
+            right:-2%;
+            position: relative;}
+
+  
+  .elcar22{flex-direction: column;
+            width:700%;
+            height:100%;
+            border:1px solid black;
+            top:370px;
+            left:-510px;
+            position: relative;}

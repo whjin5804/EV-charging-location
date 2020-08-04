@@ -1,29 +1,49 @@
 <!doctype html>
 <html>
+  <link rel="stylesheet" href="style.css">
 <head>
 <title>전기차 충전소 정보 사이트에 오신 것을 환영합니다.</title>
 <meta charset="utf-8">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172046773-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-172046773-1');
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172046773-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-172046773-1');
 </script>
 
-<link rel="stylesheet" href="style.css">
 
+<script>
+      function 주간야간컨트롤(self){
+      var target = document.querySelector('body');
+      if(self.value === '야간모드') {
+      target.style.background = 'black';
+      target.style.color = 'white';
+      self.value = '주간모드';
+      } else{
+      target.style.background = 'white';
+      target.style.color = 'black';
+     self.value = '야간모드';
+      }
+      }      
+</script>
 </head>
+
 <body>
-  <a href="head1.html">전기차는 식사중</a><br>
+  <a href="head1.html">전기차는 식사중</a>
   <div class="container">
+    <div class="item item0"><a href="index.html">Home</div></a>
     <div class="item item1"><a href="head1.html">전기차소개</div></a>
+    <div class="item item1"> </div></a>
     <div class="item item2"><a href="head2.html">전기차 충전소 찾기</div></a>
+    <div class="item item1"> </div></a>
     <div class="item item3"><a href="head3.html">기타</div></a>
-    
   </div>
+  <br><br><br>
+    
   <br><br>
 
   
@@ -32,15 +52,16 @@
         대한민국 전기차 충전소 데이터베이스</h1>
     </div>
      
-    <div class="button1">
+    <span class="button1">
         <div id="name">
         <input type="text" placeholder="목적지를 입력하세요.">
         <button>검색</button>     
       </div>
-    </div>
+    
+        <input id="야간모드_주간모드" type="button" value="야간모드" onclick="
+        주간야간컨트롤(this);">
       <br><br><br><br><br><br>
-      <br><br><br><br><br><br><br><br>
-
+      <br>
 
 
 
@@ -66,8 +87,7 @@
    문의 : whjin5804@naver.com</a><br>
    정보출처 : 생활코딩, 공공데이터포털<br>
    급속충전시설 이용관련문의 및 회원카드발급문의 한국자동차환경협회 : 1661-9408
-  <br><br>
-  
+  <br><br><br><br>
   </div>
 
 <!-- 댓글기능
